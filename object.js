@@ -1,4 +1,4 @@
-const ObjectSimulator(function() {
+const object = (function() {
     
   function create(o) {
      function F(){}
@@ -14,8 +14,8 @@ const ObjectSimulator(function() {
    * b function
    */
   function instanceOf(a, b) {
-     const proto = getPrototypeOf(a);
-     const prototype = b.prototype;
+     let proto = getPrototypeOf(a);
+     let prototype = b.prototype;
      
      while(true) {
         if (!proto) {
